@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - ECOSHOP</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header/Navigation Bar -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-text">ECOSHOP</span>
+                </div>
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html" class="active">Products</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="research.html">Research</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </nav>
+                <div class="header-icons">
+                    <a href="cart.html" class="icon-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                    </a>
+                    <a href="profile.html" class="icon-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </a>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail">
+        <div class="container">
+            <div class="product-detail-wrapper">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&h=600&fit=crop" alt="Product Image" id="mainProductImage">
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=150&h=150&fit=crop" alt="Thumbnail 1" class="thumbnail active" onclick="changeImage(this)">
+                        <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=150&h=150&fit=crop" alt="Thumbnail 2" class="thumbnail" onclick="changeImage(this)">
+                        <img src="https://images.unsplash.com/photo-1594633313593-bab3825d0caf?w=150&h=150&fit=crop" alt="Thumbnail 3" class="thumbnail" onclick="changeImage(this)">
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h1 id="productName">Bamboo Toothbrush</h1>
+                    <div class="product-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">(24 reviews)</span>
+                    </div>
+                    <div class="product-price-detail">
+                        <span class="current-price">$10.00</span>
+                        <span class="old-price">$15.00</span>
+                        <span class="discount-badge">33% OFF</span>
+                    </div>
+                    <div class="product-description">
+                        <h3>Description</h3>
+                        <p>This eco-friendly bamboo toothbrush is made from sustainable bamboo and features soft bristles for gentle cleaning. Perfect for those who care about the environment and want to reduce plastic waste.</p>
+                        <ul class="product-features">
+                            <li>100% Biodegradable</li>
+                            <li>Soft Bristles</li>
+                            <li>Eco-Friendly Packaging</li>
+                            <li>Long Lasting</li>
+                        </ul>
+                    </div>
+                    <div class="product-options">
+                        <div class="quantity-selector">
+                            <label for="quantity">Quantity:</label>
+                            <div class="quantity-controls">
+                                <button class="qty-btn" onclick="decreaseQty()">-</button>
+                                <input type="number" id="quantity" value="1" min="1" max="10">
+                                <button class="qty-btn" onclick="increaseQty()">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn-add-cart">ADD TO CART</button>
+                        <button class="btn-buy-now">BUY NOW</button>
+                    </div>
+                    <div class="product-meta">
+                        <p><strong>SKU:</strong> ECO-BTB-001</p>
+                        <p><strong>Category:</strong> Personal Care</p>
+                        <p><strong>Tags:</strong> Eco-Friendly, Bamboo, Sustainable</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products">
+        <div class="container">
+            <h2 class="section-title">Related Products</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=300&h=300&fit=crop" alt="Reusable Straws">
+                    </div>
+                    <h3 class="product-name">Reusable Straws</h3>
+                    <p class="product-price">$15.00</p>
+                    <button class="btn-buy-now" onclick="window.location.href='product-detail.html?id=2'">BUY NOW</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1594633313593-bab3825d0caf?w=300&h=300&fit=crop" alt="Organic Tote">
+                    </div>
+                    <h3 class="product-name">Organic Tote</h3>
+                    <p class="product-price">$20.00</p>
+                    <button class="btn-buy-now" onclick="window.location.href='product-detail.html?id=3'">BUY NOW</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=300&h=300&fit=crop" alt="Nature Soap">
+                    </div>
+                    <h3 class="product-name">Nature Soap</h3>
+                    <p class="product-price">$12.00</p>
+                    <button class="btn-buy-now" onclick="window.location.href='product-detail.html?id=4'">BUY NOW</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 ECOSHOP. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function changeImage(element) {
+            const mainImage = document.getElementById('mainProductImage');
+            mainImage.src = element.src.replace('w=150&h=150', 'w=600&h=600');
+            document.querySelectorAll('.thumbnail').forEach(thumb => thumb.classList.remove('active'));
+            element.classList.add('active');
+        }
+
+        function increaseQty() {
+            const qtyInput = document.getElementById('quantity');
+            if (parseInt(qtyInput.value) < 10) {
+                qtyInput.value = parseInt(qtyInput.value) + 1;
+            }
+        }
+
+        function decreaseQty() {
+            const qtyInput = document.getElementById('quantity');
+            if (parseInt(qtyInput.value) > 1) {
+                qtyInput.value = parseInt(qtyInput.value) - 1;
+            }
+        }
+    </script>
+</body>
+</html>
+
